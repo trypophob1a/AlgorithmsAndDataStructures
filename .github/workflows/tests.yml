@@ -3,7 +3,8 @@ name: tests
 on:
   push:
     branches:
-      - implementation*
+      - '*'
+      - '!master'
 
 env:
   GO111MODULE: "on"
