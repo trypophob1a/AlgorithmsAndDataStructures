@@ -71,3 +71,4 @@ linters:
     - varcheck
     - wastedassign
     - whitespace
+    - wsl
