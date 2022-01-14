@@ -12,6 +12,7 @@ env:
 jobs:
   go_get:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.ref, 'calendar') }}
     steps:
       - name: Extract branch name
         run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
@@ -23,6 +24,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.ref, 'combinatorics') }}
     steps:
       - name: Extract branch name
         run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
@@ -38,6 +40,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.ref, 'combinatorics') }}
     steps:
       - name: Extract branch name
         run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
