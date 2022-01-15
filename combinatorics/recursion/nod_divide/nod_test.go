@@ -13,7 +13,7 @@ func TestGetNodeBySubtraction(t *testing.T) {
 		b        int
 		expected int
 	}{
-		{a: 4, b: 2, expected: 2},
+		{a: 4, b: 2, expected: 3},
 		{a: 32, b: 15, expected: 1},
 		{a: 16, b: 32, expected: 16},
 		{a: 12, b: 5, expected: 1},
