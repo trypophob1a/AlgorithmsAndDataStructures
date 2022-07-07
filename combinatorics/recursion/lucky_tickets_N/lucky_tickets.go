@@ -1,5 +1,5 @@
 package luckyticketsN
 
 func luckyTicketsCount(n uint) uint {
-	return 0
+	return 1
 }
