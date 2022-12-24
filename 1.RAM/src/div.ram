@@ -1,0 +1,46 @@
+<input> 14 7
+
+;---------------------------
+; read input
+;---------------------------
+
+read 1
+read 2 
+
+;---------------------------
+; result
+;---------------------------
+
+load =0
+store 3
+
+;---------------------------
+; division
+;---------------------------
+
+div:
+  load 3
+  add =1
+  store 3
+  load 1
+  sub 2
+  store 1
+  jgtz div
+
+  
+ get_remains:
+   jz done
+   add 2
+   store 1
+   load 3
+   sub =1
+   store 3
+   
+;---------------------------    
+; done
+;--------------------------
+done:
+  write 3 ; result
+  write 1 ; remains
+  halt
+;---------------------------

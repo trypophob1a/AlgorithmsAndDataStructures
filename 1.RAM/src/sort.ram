@@ -1,0 +1,96 @@
+<input> 5 4 5 6 11 4
+
+; считываем количество
+read 0
+add =10
+store 1 ; конец массива
+; инициализируем счетчик
+load =10
+store 2 ; счетчик
+; считываем данные
+getdata:
+  read *2
+  load 2
+  add =1
+  store 2
+  sub 1
+  jz stop
+  jgtz stop
+  jmp getdata
+stop:
+
+; пишем код тут
+load =10
+store 2 ; i (r2)
+load 1
+; N
+store 3
+; N - 1
+sub =1
+store 1
+loop_i:
+  ; prepare k
+  load 2
+  add =1
+  store 4 ; k (r4)
+
+loop_j:
+  ; load k-th element
+  load *4
+  ; compare with i-th element
+  sub *2
+  jgtz continue
+
+  ; swap
+  load *2
+  store 5
+  load *4
+  store *2
+  load 5
+  store *4
+
+continue:
+  ; increment k (r4)
+  load 4
+  add =1
+  store 4
+  ; if r3 <= r4
+  sub 3
+  jz end_loop_j
+  jgtz end_loop_j
+  ; exit the loop
+  ; else continue
+  jmp loop_j
+
+end_loop_j:
+  ; increment i (r2)
+  load 2
+  add =1
+  store 2
+  ; if r1 <= r2
+  sub 1
+  jz end_loop_i
+  jgtz end_loop_i
+  ; exit the loop
+  ; else continue
+  jmp loop_i
+end_loop_i:
+; restore N
+load 1
+add =1
+store 1
+
+load =10
+store 2 ; счетчик
+; выводим данные
+outdata:
+  write *2
+  load 2
+  add =1
+  store 2
+  sub 1
+  jz exit
+  jgtz exit
+  jmp outdata
+exit:
+halt
