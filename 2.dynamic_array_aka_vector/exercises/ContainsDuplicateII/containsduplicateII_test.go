@@ -12,15 +12,18 @@ func Test_containsNearbyDuplicate(t *testing.T) {
 		args args
 		want bool
 	}{
-		{"first and last",
+		{
+			"first and last",
 			args{[]int{1, 2, 3, 1}, 3},
 			true,
 		},
-		{"penultimate and last",
+		{
+			"penultimate and last",
 			args{[]int{1, 0, 1, 1}, 1},
 			true,
 		},
-		{"dont have",
+		{
+			"dont have",
 			args{[]int{1, 2, 3, 1, 2, 3}, 2},
 			false,
 		},
@@ -44,15 +47,18 @@ func Test_naiveContainsNearbyDuplicate(t *testing.T) {
 		args args
 		want bool
 	}{
-		{"first and last",
+		{
+			"first and last",
 			args{[]int{1, 2, 3, 1}, 3},
 			true,
 		},
-		{"penultimate and last",
+		{
+			"penultimate and last",
 			args{[]int{1, 0, 1, 1}, 1},
 			true,
 		},
-		{"dont have",
+		{
+			"dont have",
 			args{[]int{1, 2, 3, 1, 2, 3}, 2},
 			false,
 		},

@@ -15,31 +15,38 @@ func Test_rotate(t *testing.T) {
 		args      args
 		wantArray []int
 	}{
-		{"1 rotate",
+		{
+			"1 rotate",
 			args{[]int{-1, -100, 3, 99}, 1},
 			[]int{99, -1, -100, 3},
 		},
-		{"2 rotate",
+		{
+			"2 rotate",
 			args{[]int{-1, -100, 3, 99}, 2},
 			[]int{3, 99, -1, -100},
 		},
-		{"3 rotate",
+		{
+			"3 rotate",
 			args{[]int{-1, -100, 3, 99}, 3},
 			[]int{-100, 3, 99, -1},
 		},
-		{"3 rotate if len = 3",
+		{
+			"3 rotate if len = 3",
 			args{[]int{1, 2, 3}, 3},
 			[]int{1, 2, 3},
 		},
-		{"4 rotate if len = 3",
+		{
+			"4 rotate if len = 3",
 			args{[]int{1, 2, 3}, 4},
 			[]int{3, 1, 2},
 		},
-		{"12 rotate if len = 3",
+		{
+			"12 rotate if len = 3",
 			args{[]int{1, 2, 3}, 3},
 			[]int{1, 2, 3},
 		},
-		{"25 rotate if len = 3",
+		{
+			"25 rotate if len = 3",
 			args{[]int{1, 2, 3}, 3},
 			[]int{1, 2, 3},
 		},
