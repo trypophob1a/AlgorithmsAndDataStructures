@@ -15,7 +15,7 @@ func rotate(nums []int, k int) {
 	reverse(nums, k, lastIndex)
 }
 
-// rotate O(n) space O(1).
+// reverse O(n) space O(1).
 func reverse(slice []int, begin, end int) {
 	for ; begin < end; begin, end = begin+1, end-1 {
 		slice[begin], slice[end] = slice[end], slice[begin]
