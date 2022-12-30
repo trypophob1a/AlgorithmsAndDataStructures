@@ -6,7 +6,7 @@
    [_задача взята отсюда_](https://leetcode.com/problems/contains-duplicate-ii/)
 4. [**Вращение массива (Medium)**](./RotateArray)<br>
    [_задача взята отсюда_](https://leetcode.com/problems/rotate-array/)
-5. [**3Сумма (Medium)**](./3Sum)<br>
+5. [**3Сумма (Medium)**](./ThreeSum)<br>
    [_задача взята отсюда_](https://leetcode.com/problems/3sum/)
 6. [**Найти первую и последнюю позицию элемента
 в отсортированном массиве (Medium)**](./FindFirstandLastPositionofElementinSortedArray)<br>
