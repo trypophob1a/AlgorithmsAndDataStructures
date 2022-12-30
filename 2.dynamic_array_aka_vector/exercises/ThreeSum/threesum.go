@@ -8,6 +8,10 @@ func threeSum(nums []int) [][]int {
 	sort.Ints(nums)
 
 	for i := range nums {
+		if nums[i] > 0 {
+			break
+		}
+
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
